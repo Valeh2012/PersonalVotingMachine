@@ -1,0 +1,106 @@
+menu "Open Voting Client Configuration"
+
+    config OVC_WIFI_SSID
+        string "WiFi SSID"
+        help
+            SSID (network name) for the example to connect to.
+
+    config OVC_WIFI_PASSWORD
+        string "WiFi Password"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config OVC_WEB_SERVER
+        string "Server address"
+        help
+            Server host (or ip) address
+    config OVC_WEB_PORT
+        int "Server port"
+        default 443
+        help
+            443 for TLS/SSL
+
+    config OVC_DDS_SNI
+        string "DDS Server SNI address"
+        help
+            SNI for authentication service
+
+    config OVC_CHOICES_SNI
+        string "DDS Server SNI address"
+        help
+            SNI for authentication service
+
+    config OVC_VOTING_SNI
+        string "DDS Server SNI address"
+        help
+            SNI for authentication service
+
+    config OVC_PHONE_NUMBER
+        string "Voter's Phone number"
+        help
+            User phone
+
+    config OVC_ID_CODE
+        string "Voter's ID number"
+        help
+            ID Code
+
+    config OVC_PIN_DC
+        int "DC Pin"
+        default 21
+        help
+            DC pin number connected to screen
+
+    config OVC_PIN_LITE
+        int "Lite Pin"
+        default -1
+        help
+            Backlighting pin number connected to screen
+
+    config OVC_PIN_RESET
+        int "RST Pin"
+        default 18
+        help
+            I2C RESET pin number connected to screen
+
+    config OVC_PIN_MOSI
+        int "MOSI Pin"
+        default 13
+        help
+            SPI MOSI pin number connected to screen. 
+
+    config OVC_PIN_CS
+        int "CS Pin"
+        default 15
+        help
+            SPI CS pin number connected to screen
+    config OVC_PIN_CLK
+        int "CLK Pin"
+        default 14
+        help
+            SPI CLK pin number connected to screen
+
+	config OVC_PIN_TS_YP
+        int "Y+ Pin"
+        default 32
+        help
+            Y+ pin number connected to touchscreen
+
+	config OVC_PIN_TS_YM
+        int "Y- Pin"
+        default 25
+        help
+            Y- pin number connected to touchscreen
+
+	config OVC_PIN_TS_XP
+        int "X+ Pin"
+        default 26
+        help
+            X+ pin number connected to touchscreen
+
+	config OVC_PIN_TS_XM
+        int "X- Pin"
+        default 33
+        help
+            X- pin number connected to touchscreen
+endmenu

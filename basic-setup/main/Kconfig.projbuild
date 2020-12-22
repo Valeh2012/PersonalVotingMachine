@@ -1,0 +1,82 @@
+menu "Open Voting Client Configuration"
+
+	config OVC_WIFI_SSID
+		string "WiFi SSID"
+		help
+			SSID (network name) for the example to connect to.
+
+	config OVC_WIFI_PASSWORD
+		string "WiFi Password"
+		help
+        	WiFi password (WPA or WPA2) for the example to use.
+
+	config OVC_WEB_SERVER
+		string "Server address"
+		help
+			Server host (or ip) address
+
+	config OVC_WEB_PORT
+		int "Server port"
+		default 443
+		help
+			443 for TLS/SSL
+
+	config OVC_DDS_SNI
+		string "DDS Server SNI address"
+		help
+			SNI for authentication service
+
+    config OVC_CHOICES_SNI
+        string "DDS Server SNI address"
+        help
+            SNI for authentication service
+
+    config OVC_VOTING_SNI
+        string "DDS Server SNI address"
+        help
+            SNI for authentication service
+
+    config OVC_PHONE_NUMBER
+        string "Voter's Phone number"
+        help
+            User phone
+
+    config OVC_ID_CODE
+        string "Voter's ID number"
+        help
+            ID Code
+
+    config OVC_PIN_SDA
+        int "SDA Pin"
+        default 5
+        help
+            I2C SDA pin number connected to screen
+
+    config OVC_PIN_SCL
+        int "SCL Pin"
+        default 4
+        help
+            I2C SCL pin number connected to screen
+
+    config OVC_PIN_RESET
+        int "RESET Pin"
+        default -1
+        help
+            I2C RESET pin number connected to screen
+            
+    config OVC_PIN_ROT_ENC_CLK
+        int "Rotary Encoder CLK Pin"
+        default 16
+        help
+            I2C RESET pin number connected to screen
+    config OVC_PIN_ROT_ENC_DT
+        int "Rotary Encoder DT Pin"
+        default 13
+        help
+            I2C RESET pin number connected to screen
+    config OVC_PIN_ROT_ENC_SW
+        int "Rotary Encoder SW Pin"
+        default 14
+        help
+            I2C RESET pin number connected to screen
+endmenu

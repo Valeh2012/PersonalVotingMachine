@@ -1,0 +1,11 @@
+*.[oa]
+*~
+build/
+docs/
+sdkconfig.old
+*.project
+*.cproject
+*.settings/
+*.pem
+
+esp32-eclipse-includes.xml
